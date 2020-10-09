@@ -1,15 +1,6 @@
 # -*- coding: utf-8 -*-
 
 from model.client import Client
-from fixture.application import Application
-import pytest
-
-
-@pytest.fixture
-def app(request):
-    fixture = Application()
-    request.addfinalizer(fixture.destroy)
-    return fixture
 
 
 def test_add_client(app):
@@ -20,4 +11,3 @@ def test_add_client(app):
                             bday="10",bmonth="August", byear="1999", aday="15", amonth="April", ayear="2020",
                             address2="Spb2", phone2="+79808887756"))
     app.session.logout()
-
