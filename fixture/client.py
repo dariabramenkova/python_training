@@ -94,3 +94,13 @@ class ClientHelper:
         wd.switch_to_alert().accept()
         self.app.open_home_page()
 
+    def edit_first_client(self, client):
+        wd = self.app.wd
+        self.app.open_home_page()
+        wd.find_element_by_name("selected[]").click()
+        wd.find_element_by_xpath("//img[@alt='Edit']").click()
+        wd.find_element_by_name("firstname").click()
+        wd.find_element_by_name("firstname").clear()
+        wd.find_element_by_name("firstname").send_keys(client.name)
+        wd.find_element_by_name("update").click()
+        wd.find_element_by_link_text("home page").click()
