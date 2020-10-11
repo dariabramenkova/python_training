@@ -15,6 +15,12 @@ class ClientHelper:
         # fill client form
         wd = self.app.wd
         self.open_new_add_pages()
+        self.full_client_firm(client)
+        # submit new client
+        wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
+
+    def full_client_firm (self, client):
+        wd = self.app.wd
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
         wd.find_element_by_name("firstname").send_keys(client.name)
@@ -33,7 +39,6 @@ class ClientHelper:
         wd.find_element_by_name("address").click()
         wd.find_element_by_name("address").clear()
         wd.find_element_by_name("address").send_keys(client.address)
-        wd.find_element_by_name("theform").click()
         wd.find_element_by_name("home").click()
         wd.find_element_by_name("home").click()
         wd.find_element_by_name("home").clear()
@@ -75,16 +80,13 @@ class ClientHelper:
         wd.find_element_by_name("ayear").click()
         wd.find_element_by_name("ayear").clear()
         wd.find_element_by_name("ayear").send_keys(client.ayear)
-        wd.find_element_by_name("new_group").click()
-        wd.find_element_by_name("new_group").click()
         wd.find_element_by_name("address2").click()
         wd.find_element_by_name("address2").clear()
         wd.find_element_by_name("address2").send_keys(client.address2)
         wd.find_element_by_name("phone2").click()
         wd.find_element_by_name("phone2").clear()
         wd.find_element_by_name("phone2").send_keys(client.phone2)
-        # submit new client
-        wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
+
 
     def delete_first_client(self):
         wd = self.app.wd
@@ -99,8 +101,6 @@ class ClientHelper:
         self.app.open_home_page()
         wd.find_element_by_name("selected[]").click()
         wd.find_element_by_xpath("//img[@alt='Edit']").click()
-        wd.find_element_by_name("firstname").click()
-        wd.find_element_by_name("firstname").clear()
-        wd.find_element_by_name("firstname").send_keys(client.name)
+        self.full_client_firm(client)
         wd.find_element_by_name("update").click()
         wd.find_element_by_link_text("home page").click()
