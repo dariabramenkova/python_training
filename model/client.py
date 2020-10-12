@@ -1,7 +1,8 @@
 class Client:
 
-    def __init__(self, name, middlename, lastname, nickname, title, address, home, mobile, work, fax,
-                          email, email2, email3, bday, bmonth, byear, aday, amonth, ayear, address2, phone2):
+    def __init__(self, name=None, middlename=None, lastname=None, nickname=None, title=None, address=None, home=None,
+                 mobile=None, work=None, fax=None, email=None, email2=None, email3=None, bday="-", bmonth="-",
+                 byear=None, aday="-", amonth="-", ayear=None, address2=None, phone2=None):
         self.name=name
         self.middlename=middlename
         self.lastname=lastname
