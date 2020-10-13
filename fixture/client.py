@@ -8,6 +8,8 @@ class ClientHelper:
     def open_new_add_pages(self):
         # open add new page and init new client
         wd = self.app.wd
+        if wd.current_url.endswith("/edit.php") and len(wd.find_elements_by_name("add next")) >0 :
+            wd.find_element_by_link_text("add next").click()
         wd.find_element_by_link_text("add new").click()
 
 
