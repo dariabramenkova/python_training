@@ -1,4 +1,5 @@
 from selenium.webdriver.support.ui import Select
+from model.client import Client
 
 class ClientHelper:
 
@@ -66,6 +67,7 @@ class ClientHelper:
         self.select_first_client()
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
+        wd.find_element_by_css_selector("div.msgbox")
         self.app.open_home_page()
 
     def select_first_client(self):
@@ -86,3 +88,14 @@ class ClientHelper:
         wd = self.app.wd
         self.app.open_home_page()
         return len(wd.find_elements_by_name("selected[]"))
+
+    def get_client_list(self):
+        wd = self.app.wd
+        self.app.open_home_page()
+        clients = []
+        for element in wd.find_elements_by_xpath("//tr[contains(@name, 'entry')]"):
+            cells = element.find_element_by_tag_name("td")
+            text = cells.text
+            id = element.find_element_by_name("selected[]").get_attribute("value")
+            clients.append(Client(name=text, id=id))
+        return clients
