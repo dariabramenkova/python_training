@@ -11,8 +11,8 @@ def test_add_client(app):
                             bday="10",bmonth="August", byear="1999", aday="15", amonth="April", ayear="2020",
                             address2="Spb2", phone2="+79808887756")
     app.client.create_new_client(client)
+    assert len(old_clients)+1 == app.client.count()
     new_clients=app.client.get_client_list()
-    assert len(old_clients)+1 == len(new_clients)
     old_clients.append(client)
     assert sorted(old_clients, key=Client.id_or_max) == sorted(new_clients, key=Client.id_or_max)
 
@@ -24,8 +24,8 @@ def test_add_client_new(app):
                             bday="10",bmonth="August", byear="1999", aday="15", amonth="April", ayear="2020",
                             address2="Spb2", phone2="+79808887756")
     app.client.create_new_client(client)
+    assert len(old_clients)+1 == app.client.count()
     new_clients=app.client.get_client_list()
-    assert len(old_clients)+1 == len(new_clients)
     old_clients.append(client)
     assert sorted(old_clients, key=Client.id_or_max) == sorted(new_clients, key=Client.id_or_max)
 

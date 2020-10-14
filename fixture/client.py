@@ -21,7 +21,7 @@ class ClientHelper:
         self.full_client_firm(client)
         # submit new client
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
-
+        self.client_cache = None
     def full_client_firm (self, client):
         wd = self.app.wd
         self.edit_field_value("firstname", client.name)
@@ -70,6 +70,7 @@ class ClientHelper:
         wd.switch_to_alert().accept()
         wd.find_element_by_css_selector("div.msgbox")
         self.app.open_home_page()
+        self.client_cache = None
 
     def select_first_client(self):
         wd = self.app.wd
@@ -83,6 +84,7 @@ class ClientHelper:
         self.full_client_firm(new_client_date)
         wd.find_element_by_name("update").click()
         wd.find_element_by_link_text("home page").click()
+        self.client_cache=None
 
 
     def count(self):
@@ -90,14 +92,17 @@ class ClientHelper:
         self.app.open_home_page()
         return len(wd.find_elements_by_name("selected[]"))
 
+    client_cache=None
+
     def get_client_list(self):
-        wd = self.app.wd
-        self.app.open_home_page()
-        clients = []
-        for element in wd.find_elements_by_xpath("//*[@name='entry']"):
-            cells = element.find_elements_by_tag_name("td")
-            firstname = cells[2].text
-            secoundname = cells[1].text
-            id = element.find_element_by_name("selected[]").get_attribute("value")
-            clients.append(Client(id=id, name=firstname, middlename=secoundname))
-        return clients
+        if self.client_cache is None:
+            wd = self.app.wd
+            self.app.open_home_page()
+            self.client_cache = []
+            for element in wd.find_elements_by_xpath("//*[@name='entry']"):
+                cells = element.find_elements_by_tag_name("td")
+                firstname = cells[2].text
+                secoundname = cells[1].text
+                id = element.find_element_by_name("selected[]").get_attribute("value")
+                self.client_cache.append(Client(id=id, name=firstname, middlename=secoundname))
+        return list(self.client_cache)
