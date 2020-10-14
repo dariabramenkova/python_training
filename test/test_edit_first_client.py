@@ -5,6 +5,7 @@ def test_edit_first_client(app):
     old_clients=app.client.get_client_list()
     client = Client(name="Masha")
     client.id = old_clients[0].id
+    client.middlename = old_clients[2].middlename
     #if app.client.count() == 0:
     #    app.client.create_new_client(Client(name="Daria"))
     app.client.edit_first_client(client)

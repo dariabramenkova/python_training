@@ -32,10 +32,11 @@ class Client:
 
 
     def __repr__(self):
-        return "%s:%s" % (self.id, self.name)
+        return "%s:%s:%s" % (self.id, self.name, self.middlename)
 
     def __eq__(self, other2):
-        return self.id is None or other2.id is None or self.id == other2.id and self.name == other2.name
+        return self.id is None or other2.id is None or self.id == other2.id and self.name == other2.name and \
+               self.middlename==other2.middlename
 
     def id_or_max(self):
         if self.id:

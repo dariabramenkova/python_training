@@ -26,6 +26,7 @@ class ClientHelper:
         wd = self.app.wd
         self.edit_field_value("firstname", client.name)
         self.edit_field_value("middlename", client.middlename)
+        self.edit_field_value("lastname", client.lastname)
         self.edit_field_value("title", client.title)
         self.edit_field_value("address", client.address)
         self.edit_field_value("home", client.home)
@@ -55,7 +56,7 @@ class ClientHelper:
 
     def edit_date_value(self, field_value, value):
         wd = self.app.wd
-        if value is not "-":
+        if value != "-":
             wd.find_element_by_name(field_value).click()
             Select(wd.find_element_by_name(field_value)).select_by_visible_text(value)
             wd.find_element_by_name(field_value).click()
@@ -93,9 +94,10 @@ class ClientHelper:
         wd = self.app.wd
         self.app.open_home_page()
         clients = []
-        for element in wd.find_elements_by_xpath("//tr[contains(@name, 'entry')]"):
-            cells = element.find_element_by_tag_name("td")
-            text = cells.text
+        for element in wd.find_elements_by_xpath("//*[@name='entry']"):
+            cells = element.find_elements_by_tag_name("td")
+            firstname = cells[2].text
+            secoundname = cells[1].text
             id = element.find_element_by_name("selected[]").get_attribute("value")
-            clients.append(Client(name=text, id=id))
+            clients.append(Client(id=id, name=firstname, middlename=secoundname))
         return clients
