@@ -6,7 +6,8 @@ class Client:
 
     def __init__(self, name=None, middlename=None, lastname=None, nickname=None, title=None, address=None, home=None,
                  mobile=None, work=None, fax=None, email=None, email2=None, email3=None, bday="-", bmonth="-",
-                 byear=None, aday="-", amonth="-", ayear=None, address2=None, phone2=None, id=None):
+                 byear=None, aday="-", amonth="-", ayear=None, address2=None, phone2=None, id=None,
+                 all_phones_from_home_page=None, all_emails_from_home_page=None):
         self.name=name
         self.middlename=middlename
         self.lastname=lastname
@@ -29,6 +30,8 @@ class Client:
         self.address2=address2
         self.phone2=phone2
         self.id=id
+        self.all_phones_from_home_page=all_phones_from_home_page
+        self.all_emails_from_home_page=all_emails_from_home_page
 
 
     def __repr__(self):
