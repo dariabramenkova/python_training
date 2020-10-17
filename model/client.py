@@ -35,7 +35,7 @@ class Client:
 
 
     def __repr__(self):
-        return "%s:%s:%s" % (self.id, self.name, self.middlename)
+        return "%s:%s;%s" % (self.id, self.name, self.middlename)
 
     def __eq__(self, other2):
         return self.id is None or other2.id is None or self.id == other2.id and self.name == other2.name and \
