@@ -24,11 +24,6 @@ testdata = [Client (name="", middlename="", lastname="", nickname="", address=""
     for i in range(5)
 ]
 
-#client = Client(name="Daria", middlename="Yuryevna", lastname="Familia", nickname="daria",
-#                title="Title", address="Spb", home="79999999999", mobile="79808887755", work="79999999999",
-#                fax="+77000222", email="email@mail.ru", email2="email2@mail.ru", email3="email3@mail.ru",
-#                bday="10", bmonth="August", byear="1999", aday="15", amonth="April", ayear="2020",
-#                address2="Spb2", phone2="79808887756")
 
 @pytest.mark.parametrize("client", testdata, ids=[repr(x) for x in testdata])
 def test_add_client(app, client):
