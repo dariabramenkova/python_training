@@ -2,28 +2,8 @@
 
 from model.client import Client
 import pytest
-import string
-import random
 
-
-def random_string(prefix, maxlen):
-    symbols=string.ascii_letters
-    return prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])
-def random_only_digital(prefix, maxlen):
-    symbols=string.digits
-    return prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])
-
-testdata = [Client (name="", middlename="", lastname="", nickname="", address="", home="", mobile="", work="",
-                   email="", email2="", email3="", phone2="") ] + [
-    Client(name=random_string("name",5), middlename=random_string("middlename", 10),
-           lastname=random_string("lastname",20), nickname=random_string("nickname",20),
-           address=random_string("address",20), home=random_only_digital("home", 11),
-           mobile=random_only_digital("mobile",11), work=random_only_digital("work",11),
-           email="email@mail.ru", email2="email2@mail.ru", email3="email3@mail.ru",
-           phone2=random_only_digital("phone2",11)
-           )
-    for i in range(5)
-]
+from data.add_client import constant as testdata
 
 
 @pytest.mark.parametrize("client", testdata, ids=[repr(x) for x in testdata])
