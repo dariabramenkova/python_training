@@ -11,5 +11,5 @@ def test_edit_name_group(app, db):
     app.group.edit_group_by_id(group_id.id, group)
     new_groups = db.get_group_list()
     assert len(old_groups) == len(new_groups)
-    old_groups[group_id.id]=group
+    old_groups[0]=group
     assert sorted(old_groups, key=Group.id_or_max) == sorted(new_groups, key=Group.id_or_max)

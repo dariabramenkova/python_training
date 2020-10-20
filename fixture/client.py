@@ -75,6 +75,21 @@ class ClientHelper:
         self.app.open_home_page()
         self.client_cache = None
 
+    def delete_client_by_id(self, id):
+        wd = self.app.wd
+        self.app.open_home_page()
+        self.select_client_by_id(id)
+        wd.find_element_by_xpath("//input[@value='Delete']").click()
+        wd.switch_to_alert().accept()
+        wd.find_element_by_css_selector("div.msgbox")
+        self.app.open_home_page()
+        self.client_cache = None
+
+
+    def select_client_by_id(self, id):
+        wd = self.app.wd
+        wd.find_element_by_css_selector("input[value='%s']"%id).click()
+
 
     def select_first_client(self):
         wd = self.app.wd
@@ -92,6 +107,17 @@ class ClientHelper:
         wd.find_element_by_name("update").click()
         wd.find_element_by_link_text("home page").click()
         self.client_cache=None
+
+    def edit_client_by_id(self, client2, new_client_date):
+        wd = self.app.wd
+        self.app.open_home_page()
+        self.select_client_by_id(client2)
+        wd.find_elements_by_xpath("//img[@alt='Edit']")[client2.id].click()
+        self.full_client_firm(new_client_date)
+        wd.find_element_by_name("update").click()
+        wd.find_element_by_link_text("home page").click()
+        self.client_cache=None
+
 
     def select_client_by_index(self, index):
         wd = self.app.wd
