@@ -3,7 +3,7 @@ from model.client import Client
 import random
 
 
-def test_delete_first_client(app, db):
+def test_delete_first_client(app, db, check_ui):
     old_clients=db.get_client_list()
     client=random.choice(old_clients)
     if app.client.count() == 0:
@@ -14,3 +14,5 @@ def test_delete_first_client(app, db):
     old_clients.remove(client)
     #old_clients[index:index+1] = []
     assert old_clients == new_clients
+    if check_ui:
+        assert sorted(new_clients, key=Client.id_or_max) == sorted(app.client.get_client_list(), key=Client.id_or_max)

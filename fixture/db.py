@@ -16,10 +16,10 @@ class DbFixture:
         list=[]
         cursor=self.connection.cursor()
         try:
-            cursor.execute("select group_id, group_name, group_header, group_footer from group_list")
+            cursor.execute("select group_id, group_name from group_list")
             for row in cursor:
-                (id, name, header, footer) = row
-                list.append(Group(id=str(id), name=name, header=header, footer=footer))
+                (id, name) = row
+                list.append(Group(id=str(id), name=name))
         finally:
             cursor.close()
         return list
@@ -29,10 +29,10 @@ class DbFixture:
         list2=[]
         cursor=self.connection.cursor()
         try:
-            cursor.execute("select id, firstname, middlename, lastname, nickname, address, home, mobile, work, email, email2, email3, phone2 from addressbook")
+            cursor.execute("select id, firstname, lastname, home, mobile, work, email, email2, email3, phone2 from addressbook where deprecated='0000-00-00 00:00:00'")
             for row in cursor:
-                (id, firstname, middlename, lastname, nickname, address, home, mobile, work, email, email2, email3, phone2) = row
-                list2.append(Client(id=str(id), name=firstname, middlename=middlename, lastname=lastname, nickname=nickname, address=address, home=home, mobile=mobile, work=work, email=email, email2=email2, email3=email3, phone2=phone2))
+                (id, firstname,lastname, home, mobile, work, email, email2, email3, phone2) = row
+                list2.append(Client(id=str(id), name=firstname, lastname=lastname, home=home, mobile=mobile, work=work, email=email, email2=email2, email3=email3, phone2=phone2))
         finally:
             cursor.close()
         return list2

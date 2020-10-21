@@ -86,10 +86,6 @@ class ClientHelper:
         self.client_cache = None
 
 
-    def select_client_by_id(self, id):
-        wd = self.app.wd
-        wd.find_element_by_css_selector("input[value='%s']"%id).click()
-
 
     def select_first_client(self):
         wd = self.app.wd
@@ -108,11 +104,14 @@ class ClientHelper:
         wd.find_element_by_link_text("home page").click()
         self.client_cache=None
 
-    def edit_client_by_id(self, client2, new_client_date):
+    def edit_client_by_id(self, id, index, new_client_date):
         wd = self.app.wd
-        self.app.open_home_page()
-        self.select_client_by_id(client2)
-        wd.find_elements_by_xpath("//img[@alt='Edit']")[client2.id].click()
+        wd.find_element_by_xpath("/html/body/div/div[3]/ul/li[1]/a").click()
+        self.select_client_by_id(id)
+        wd.find_element_by_xpath("edit").click()
+        #row = wd.find_elements_by_name("entry")[id]
+        #cell = row.find_elements_by_tag_name("td")[7]
+        #cell.find_element_by_tag_name("a").click()
         self.full_client_firm(new_client_date)
         wd.find_element_by_name("update").click()
         wd.find_element_by_link_text("home page").click()
@@ -122,6 +121,11 @@ class ClientHelper:
     def select_client_by_index(self, index):
         wd = self.app.wd
         wd.find_elements_by_name("selected[]")[index].click()
+
+    def select_client_by_id(self, id):
+        wd = self.app.wd
+        wd.find_element_by_css_selector("input[value='%s']"%id).click()
+
 
     def count(self):
         wd = self.app.wd

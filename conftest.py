@@ -43,6 +43,8 @@ def stop(request):
 def pytest_addoption(parser):
     parser.addoption("--browser", action="store", default="firefox")
     parser.addoption("--target", action="store", default="target.json") #http://localhost/addressbook/
+    parser.addoption("--check_ui", action="store_true")
+
 
 
 def pytest_generate_tests(metafunc):
@@ -69,3 +71,7 @@ def db(request):
         dbfixture.destroy()
     request.addfinalizer(fin)
     return dbfixture
+
+@pytest.fixture
+def check_ui(request):
+    return request.config.getoption("--check_ui")
