@@ -1,6 +1,12 @@
 from selenium.webdriver.support.ui import Select
 from model.client import Client
 import re
+from model.group import Group
+from fixture import db
+import random
+from fixture.orm import ORMFixture
+
+
 
 class ClientHelper:
 
@@ -198,3 +204,18 @@ class ClientHelper:
 
         return Client(name=firstname, lastname=lastname, home=home,mobile=mobile, work=work, phone2=phone2)
 
+    def add_client_to_group(self, client_id, group_id):
+        wd = self.app.wd
+        self.select_client_by_id(client_id)
+        wd.find_element_by_name("to_group").click()
+        Select(wd.find_element_by_name("to_group")).select_by_value(group_id)
+        wd.find_element_by_name("add").click()
+        self.app.open_home_page()
+
+
+    def del_client_from_group(self, client_id, group_id):
+        wd = self.app.wd
+        wd.find_element_by_name("group").click()
+        Select(wd.find_element_by_name("group")).select_by_value(group_id)
+        self.select_client_by_id(client_id)
+        wd.find_element_by_name("remove").click()
