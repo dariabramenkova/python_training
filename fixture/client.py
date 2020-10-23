@@ -206,6 +206,7 @@ class ClientHelper:
 
     def add_client_to_group(self, client_id, group_id):
         wd = self.app.wd
+        self.app.open_home_page()
         self.select_client_by_id(client_id)
         wd.find_element_by_name("to_group").click()
         Select(wd.find_element_by_name("to_group")).select_by_value(group_id)
