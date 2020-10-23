@@ -1,0 +1,50 @@
+{
+  "uid" : "19079a28bcb824e",
+  "name" : "test_group_list",
+  "title" : "Test group list",
+  "time" : {
+    "start" : 1603459001064,
+    "stop" : 1603459003068,
+    "duration" : 2004
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "b5c21d2689e0ed9c",
+    "name" : "test.test_db_matches_ui",
+    "title" : "Test db matches ui"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "REZERV-17652"
+  }, {
+    "name" : "suite-name",
+    "value" : "test.test_db_matches_ui"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "9964-MainThread"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}

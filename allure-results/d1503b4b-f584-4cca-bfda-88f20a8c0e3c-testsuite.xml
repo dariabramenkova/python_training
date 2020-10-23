@@ -1,0 +1,192 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1603459518375" stop="1603459606690">
+  <name>test.test_add_client</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1603459518375" status="passed" stop="1603459539964">
+      <name>test_add_client[None:;]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="15668-MainThread"/>
+        <label name="host" value="REZERV-17652"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1603459536759" status="passed" stop="1603459536775">
+          <name>Given a client list</name>
+          <title>Given a client list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459536775" status="passed" stop="1603459539957">
+          <name>When I add a client None:; to the list</name>
+          <title>When I add a client None:; to the list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459539957" status="passed" stop="1603459539964">
+          <name>Then the new client list is equal to the old list with the adden client</name>
+          <title>Then the new client list is equal to the old list with the adden client</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1603459539967" status="passed" stop="1603459553256">
+      <name>test_add_client[None:nameKt;middlename]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="15668-MainThread"/>
+        <label name="host" value="REZERV-17652"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1603459540061" status="passed" stop="1603459540067">
+          <name>Given a client list</name>
+          <title>Given a client list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459540067" status="passed" stop="1603459553247">
+          <name>When I add a client None:nameKt;middlename to the list</name>
+          <title>When I add a client None:nameKt;middlename to the list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459553247" status="passed" stop="1603459553255">
+          <name>Then the new client list is equal to the old list with the adden client</name>
+          <title>Then the new client list is equal to the old list with the adden client</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1603459553258" status="passed" stop="1603459566544">
+      <name>test_add_client[None:namemyWj;middlenameyd]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="15668-MainThread"/>
+        <label name="host" value="REZERV-17652"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1603459553339" status="passed" stop="1603459553343">
+          <name>Given a client list</name>
+          <title>Given a client list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459553343" status="passed" stop="1603459566535">
+          <name>When I add a client None:namemyWj;middlenameyd to the list</name>
+          <title>When I add a client None:namemyWj;middlenameyd to the list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459566535" status="passed" stop="1603459566543">
+          <name>Then the new client list is equal to the old list with the adden client</name>
+          <title>Then the new client list is equal to the old list with the adden client</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1603459566545" status="passed" stop="1603459579821">
+      <name>test_add_client[None:nameQaY;middlenameQy]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="15668-MainThread"/>
+        <label name="host" value="REZERV-17652"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1603459566626" status="passed" stop="1603459566630">
+          <name>Given a client list</name>
+          <title>Given a client list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459566630" status="passed" stop="1603459579812">
+          <name>When I add a client None:nameQaY;middlenameQy to the list</name>
+          <title>When I add a client None:nameQaY;middlenameQy to the list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459579812" status="passed" stop="1603459579820">
+          <name>Then the new client list is equal to the old list with the adden client</name>
+          <title>Then the new client list is equal to the old list with the adden client</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1603459579822" status="passed" stop="1603459593241">
+      <name>test_add_client[None:nameYWZL;middlenameCURHxd]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="15668-MainThread"/>
+        <label name="host" value="REZERV-17652"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1603459579904" status="passed" stop="1603459579909">
+          <name>Given a client list</name>
+          <title>Given a client list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459579909" status="passed" stop="1603459593225">
+          <name>When I add a client None:nameYWZL;middlenameCURHxd to the list</name>
+          <title>When I add a client None:nameYWZL;middlenameCURHxd to the list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459593225" status="passed" stop="1603459593241">
+          <name>Then the new client list is equal to the old list with the adden client</name>
+          <title>Then the new client list is equal to the old list with the adden client</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1603459593251" status="passed" stop="1603459606690">
+      <name>test_add_client[None:nameiY;middlenamebCkz]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="15668-MainThread"/>
+        <label name="host" value="REZERV-17652"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1603459593382" status="passed" stop="1603459593386">
+          <name>Given a client list</name>
+          <title>Given a client list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459593386" status="passed" stop="1603459606680">
+          <name>When I add a client None:nameiY;middlenamebCkz to the list</name>
+          <title>When I add a client None:nameiY;middlenamebCkz to the list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459606680" status="passed" stop="1603459606689">
+          <name>Then the new client list is equal to the old list with the adden client</name>
+          <title>Then the new client list is equal to the old list with the adden client</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

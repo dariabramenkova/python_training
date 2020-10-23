@@ -1,0 +1,134 @@
+{
+  "uid" : "f54026fe60cd89d",
+  "name" : "test_del_client_from_group",
+  "title" : "Test del client from group",
+  "time" : {
+    "start" : 1603458987309,
+    "stop" : 1603459001062,
+    "duration" : 13753
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 5
+  },
+  "failure" : {
+    "message" : "NoSuchElementException: Message: Unable to locate element: [name=\"remove\"]\n",
+    "stackTrace" : "app = <fixture.application.Application object at 0x04A76088>\ndb = <fixture.db.DbFixture object at 0x04A769B8>\n\n    def test_del_client_from_group(app, db):\n        with pytest.allure.step('If do not find group,add him'):\n            if len(db.get_group_list())==0:\n                app.group.create(Group(name=\"test\"))\n        with pytest.allure.step('If do not find client,add him'):\n            if len(db.get_client_list())==0:\n                app.client.create(Client(name=\"test\"))\n        with pytest.allure.step('Given a group list and a client list'):\n            groups=db.get_group_list()\n        with pytest.allure.step('Choice a group from list'):\n            group_index=random.randrange(len(groups))\n            group_id=groups[group_index].id\n            clients=db.get_client_list()\n        with pytest.allure.step('Del client from group'):\n            if len(orm.get_clients_in_group(groups[group_index]))==0:\n                client_index=random.randrange(len(clients))\n                client=clients[client_index]\n                client_id=client.id\n                app.client.add_client_to_group(client_id, group_id)\n            else:\n                client=random.choice(orm.get_clients_in_group(groups[group_index]))\n                client_id=client.id\n>           app.client.del_client_from_group(client_id, group_id)\n\ntest\\test_client_in_group.py:61: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nfixture\\client.py:222: in del_client_from_group\n    wd.find_element_by_name(\"remove\").click()\nenv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:496: in find_element_by_name\n    return self.find_element(by=By.NAME, value=name)\nenv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:976: in find_element\n    return self.execute(Command.FIND_ELEMENT, {\nenv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:321: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x04A766E8>\nresponse = {'status': 404, 'value': '{\"value\":{\"error\":\"no such element\",\"message\":\"Unable to locate element: [name=\\\\\"remove\\\\\"]...ror@chrome://marionette/content/error.js:387:5\\\\nelement.find/</<@chrome://marionette/content/element.js:330:16\\\\n\"}}'}\n\n    def check_response(self, response):\n        \"\"\"\n            Checks that a JSON response from the WebDriver does not have an error.\n    \n            :Args:\n             - response - The JSON response from the WebDriver server as a dictionary\n               object.\n    \n            :Raises: If the response contains an error message.\n            \"\"\"\n        status = response.get('status', None)\n        if status is None or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get('value', None)\n            if value_json and isinstance(value_json, basestring):\n                import json\n                try:\n                    value = json.loads(value_json)\n                    if len(value.keys()) == 1:\n                        value = value['value']\n                    status = value.get('error', None)\n                    if status is None:\n                        status = value[\"status\"]\n                        message = value[\"value\"]\n                        if not isinstance(message, basestring):\n                            value = message\n                            message = message.get('message')\n                    else:\n                        message = value.get('message', None)\n                except ValueError:\n                    pass\n    \n        exception_class = ErrorInResponseException\n        if status in ErrorCode.NO_SUCH_ELEMENT:\n            exception_class = NoSuchElementException\n        elif status in ErrorCode.NO_SUCH_FRAME:\n            exception_class = NoSuchFrameException\n        elif status in ErrorCode.NO_SUCH_WINDOW:\n            exception_class = NoSuchWindowException\n        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:\n            exception_class = StaleElementReferenceException\n        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:\n            exception_class = ElementNotVisibleException\n        elif status in ErrorCode.INVALID_ELEMENT_STATE:\n            exception_class = InvalidElementStateException\n        elif status in ErrorCode.INVALID_SELECTOR \\\n                or status in ErrorCode.INVALID_XPATH_SELECTOR \\\n                or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER:\n            exception_class = InvalidSelectorException\n        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:\n            exception_class = ElementNotSelectableException\n        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:\n            exception_class = ElementNotInteractableException\n        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:\n            exception_class = InvalidCookieDomainException\n        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:\n            exception_class = UnableToSetCookieException\n        elif status in ErrorCode.TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.SCRIPT_TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.UNKNOWN_ERROR:\n            exception_class = WebDriverException\n        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:\n            exception_class = UnexpectedAlertPresentException\n        elif status in ErrorCode.NO_ALERT_OPEN:\n            exception_class = NoAlertPresentException\n        elif status in ErrorCode.IME_NOT_AVAILABLE:\n            exception_class = ImeNotAvailableException\n        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:\n            exception_class = ImeActivationFailedException\n        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:\n            exception_class = MoveTargetOutOfBoundsException\n        elif status in ErrorCode.JAVASCRIPT_ERROR:\n            exception_class = JavascriptException\n        elif status in ErrorCode.SESSION_NOT_CREATED:\n            exception_class = SessionNotCreatedException\n        elif status in ErrorCode.INVALID_ARGUMENT:\n            exception_class = InvalidArgumentException\n        elif status in ErrorCode.NO_SUCH_COOKIE:\n            exception_class = NoSuchCookieException\n        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:\n            exception_class = ScreenshotException\n        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:\n            exception_class = ElementClickInterceptedException\n        elif status in ErrorCode.INSECURE_CERTIFICATE:\n            exception_class = InsecureCertificateException\n        elif status in ErrorCode.INVALID_COORDINATES:\n            exception_class = InvalidCoordinatesException\n        elif status in ErrorCode.INVALID_SESSION_ID:\n            exception_class = InvalidSessionIdException\n        elif status in ErrorCode.UNKNOWN_METHOD:\n            exception_class = UnknownMethodException\n        else:\n            exception_class = WebDriverException\n        if value == '' or value is None:\n            value = response['value']\n        if isinstance(value, basestring):\n            if exception_class == ErrorInResponseException:\n                raise exception_class(response, value)\n            raise exception_class(value)\n        if message == \"\" and 'message' in value:\n            message = value['message']\n    \n        screen = None\n        if 'screen' in value:\n            screen = value['screen']\n    \n        stacktrace = None\n        if 'stackTrace' in value and value['stackTrace']:\n            stacktrace = []\n            try:\n                for frame in value['stackTrace']:\n                    line = self._value_or_default(frame, 'lineNumber', '')\n                    file = self._value_or_default(frame, 'fileName', '<anonymous>')\n                    if line:\n                        file = \"%s:%s\" % (file, line)\n                    meth = self._value_or_default(frame, 'methodName', '<anonymous>')\n                    if 'className' in frame:\n                        meth = \"%s.%s\" % (frame['className'], meth)\n                    msg = \"    at %s (%s)\"\n                    msg = msg % (meth, file)\n                    stacktrace.append(msg)\n            except TypeError:\n                pass\n        if exception_class == ErrorInResponseException:\n            raise exception_class(response, message)\n        elif exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if 'data' in value:\n                alert_text = value['data'].get('text')\n            elif 'alert' in value:\n                alert_text = value['alert'].get('text')\n            raise exception_class(message, screen, stacktrace, alert_text)\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: [name=\"remove\"]\n\nenv\\lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py:242: NoSuchElementException"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "1956604e4e90ef62",
+    "name" : "test.test_client_in_group",
+    "title" : "Test client in group"
+  },
+  "steps" : [ {
+    "name" : "If do not find group,add him",
+    "title" : "If do not find group,add him",
+    "time" : {
+      "start" : 1603458988401,
+      "stop" : 1603458988405,
+      "duration" : 4
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "If do not find client,add him",
+    "title" : "If do not find client,add him",
+    "time" : {
+      "start" : 1603458988406,
+      "stop" : 1603458988410,
+      "duration" : 4
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Given a group list and a client list",
+    "title" : "Given a group list and a client list",
+    "time" : {
+      "start" : 1603458988410,
+      "stop" : 1603458988414,
+      "duration" : 4
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Choice a group from list",
+    "title" : "Choice a group from list",
+    "time" : {
+      "start" : 1603458988414,
+      "stop" : 1603458988418,
+      "duration" : 4
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Del client from group",
+    "title" : "Del client from group",
+    "time" : {
+      "start" : 1603458988418,
+      "stop" : 1603459000932,
+      "duration" : 12514
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "FAILED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "9bcac99c-a736-4e01-ad9a-f5b58b0f6f8b-attachment.txt",
+    "type" : "text/plain",
+    "size" : 279,
+    "uid" : "48d8c656de023c5d"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test.test_client_in_group"
+  }, {
+    "name" : "host",
+    "value" : "REZERV-17652"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "9964-MainThread"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}

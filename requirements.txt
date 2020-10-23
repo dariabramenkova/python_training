@@ -1,6 +1,8 @@
-pytest
+pytest==2.9.0
 selenium
 jsonpickle
 pymysql
 pony
 mysql-connector-python-rf
+lxml-4.5.2-cp38-cp38-win32.whl
+pytest-allure-adaptor

@@ -1,0 +1,131 @@
+{
+  "uid" : "dfe4e033f9f244ea",
+  "name" : "test_del_client_from_group",
+  "title" : "Test del client from group",
+  "time" : {
+    "start" : 1603459617703,
+    "stop" : 1603459621646,
+    "duration" : 3943
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 5
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "32ff4700a7477202",
+    "name" : "test.test_client_in_group",
+    "title" : "Test client in group"
+  },
+  "steps" : [ {
+    "name" : "If do not find group,add him",
+    "title" : "If do not find group,add him",
+    "time" : {
+      "start" : 1603459618904,
+      "stop" : 1603459618907,
+      "duration" : 3
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "If do not find client,add him",
+    "title" : "If do not find client,add him",
+    "time" : {
+      "start" : 1603459618907,
+      "stop" : 1603459618911,
+      "duration" : 4
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Given a group list and a client list",
+    "title" : "Given a group list and a client list",
+    "time" : {
+      "start" : 1603459618911,
+      "stop" : 1603459618914,
+      "duration" : 3
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Choice a group from list",
+    "title" : "Choice a group from list",
+    "time" : {
+      "start" : 1603459618914,
+      "stop" : 1603459618919,
+      "duration" : 5
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Del client from group",
+    "title" : "Del client from group",
+    "time" : {
+      "start" : 1603459618919,
+      "stop" : 1603459621645,
+      "duration" : 2726
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "96931b6b-6158-4b99-9eca-246a730df369-attachment.txt",
+    "type" : "text/plain",
+    "size" : 558,
+    "uid" : "b7bc99039d40d13"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test.test_client_in_group"
+  }, {
+    "name" : "host",
+    "value" : "REZERV-17652"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "thread",
+    "value" : "15668-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}

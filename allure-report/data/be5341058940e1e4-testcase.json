@@ -1,0 +1,125 @@
+{
+  "uid" : "be5341058940e1e4",
+  "name" : "test_edit_name_group",
+  "title" : "Test edit name group",
+  "time" : {
+    "start" : 1603459646588,
+    "stop" : 1603459649024,
+    "duration" : 2436
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 5
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "af7a595e433ae84e",
+    "name" : "test.test_edit_group",
+    "title" : "Test edit group"
+  },
+  "steps" : [ {
+    "name" : "If do not find group,add him",
+    "title" : "If do not find group,add him",
+    "time" : {
+      "start" : 1603459647733,
+      "stop" : 1603459648015,
+      "duration" : 282
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Given a group list",
+    "title" : "Given a group list",
+    "time" : {
+      "start" : 1603459648015,
+      "stop" : 1603459648018,
+      "duration" : 3
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Choice a group from list",
+    "title" : "Choice a group from list",
+    "time" : {
+      "start" : 1603459648018,
+      "stop" : 1603459648018,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Edit a group from list",
+    "title" : "Edit a group from list",
+    "time" : {
+      "start" : 1603459648018,
+      "stop" : 1603459648999,
+      "duration" : 981
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new group list is equal to the old list with the adden group",
+    "title" : "Then the new group list is equal to the old list with the adden group",
+    "time" : {
+      "start" : 1603459648999,
+      "stop" : 1603459649023,
+      "duration" : 24
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "REZERV-17652"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "thread",
+    "value" : "15668-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "suite-name",
+    "value" : "test.test_edit_group"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}

@@ -1,0 +1,223 @@
+{
+  "testCases" : [ {
+    "uid" : "2dd3f1552eef2d09",
+    "name" : "test_edit_first_client",
+    "title" : "Test edit first client",
+    "time" : {
+      "start" : 1603459638585,
+      "stop" : 1603459646587,
+      "duration" : 8002
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "fe30bbed73efe379",
+    "name" : "test_add_client_in_group",
+    "title" : "Test add client in group",
+    "time" : {
+      "start" : 1603459614924,
+      "stop" : 1603459617700,
+      "duration" : 2776
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "dfe4e033f9f244ea",
+    "name" : "test_del_client_from_group",
+    "title" : "Test del client from group",
+    "time" : {
+      "start" : 1603459617703,
+      "stop" : 1603459621646,
+      "duration" : 3943
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "75a34a95a907ddf8",
+    "name" : "test_add_group[None:;;]",
+    "title" : "Test add group [None:;;]",
+    "time" : {
+      "start" : 1603459606691,
+      "stop" : 1603459608283,
+      "duration" : 1592
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "8285362e4b161540",
+    "name" : "test_add_group[None:name8aqK;headertk7pWkEo;footerCVTam]",
+    "title" : "Test add group [None:name8aqK;headertk7pWkEo;footerCVTam]",
+    "time" : {
+      "start" : 1603459608284,
+      "stop" : 1603459609617,
+      "duration" : 1333
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "d98bb17e9c043c4",
+    "name" : "test_add_group[None:nameMuu;headerSeR;footerujJtav3]",
+    "title" : "Test add group [None:nameMuu;headerSeR;footerujJtav3]",
+    "time" : {
+      "start" : 1603459609618,
+      "stop" : 1603459610924,
+      "duration" : 1306
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "3f15a033c17b05b0",
+    "name" : "test_add_group[None:nameAEo1UhSh;headerNPTrmgBtZfm;footerkiP2V]",
+    "title" : "Test add group [None:nameAEo1UhSh;headerNPTrmgBtZfm;footerkiP2V]",
+    "time" : {
+      "start" : 1603459610925,
+      "stop" : 1603459612285,
+      "duration" : 1360
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "f68f9bf00877515f",
+    "name" : "test_add_group[None:nameWinBQHX;headerHgR3rIL50Vd9cBuNpfo;footeru]",
+    "title" : "Test add group [None:nameWinBQHX;headerHgR3rIL50Vd9cBuNpfo;footeru]",
+    "time" : {
+      "start" : 1603459612287,
+      "stop" : 1603459613618,
+      "duration" : 1331
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "bf300a5f7a0309a9",
+    "name" : "test_add_group[None:nameLX5;headerx8r;footertr]",
+    "title" : "Test add group [None:nameLX5;headerx8r;footertr]",
+    "time" : {
+      "start" : 1603459613620,
+      "stop" : 1603459614922,
+      "duration" : 1302
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "3f85725fba195429",
+    "name" : "test_delete_some_group",
+    "title" : "Test delete some group",
+    "time" : {
+      "start" : 1603459636585,
+      "stop" : 1603459638584,
+      "duration" : 1999
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "be5341058940e1e4",
+    "name" : "test_edit_name_group",
+    "title" : "Test edit name group",
+    "time" : {
+      "start" : 1603459646588,
+      "stop" : 1603459649024,
+      "duration" : 2436
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "2f68e4947075aec7",
+    "name" : "test_phones_on_home_page",
+    "title" : "Test phones on home page",
+    "time" : {
+      "start" : 1603459649025,
+      "stop" : 1603459654207,
+      "duration" : 5182
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "8ab6976d1bff43e4",
+    "name" : "test_add_client[None:;]",
+    "title" : "Test add client [None:;]",
+    "time" : {
+      "start" : 1603459518375,
+      "stop" : 1603459539964,
+      "duration" : 21589
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "dc13938676a9a1ee",
+    "name" : "test_add_client[None:nameKt;middlename]",
+    "title" : "Test add client [None:nameKt;middlename]",
+    "time" : {
+      "start" : 1603459539967,
+      "stop" : 1603459553256,
+      "duration" : 13289
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "f5e0c301aed0a79a",
+    "name" : "test_add_client[None:namemyWj;middlenameyd]",
+    "title" : "Test add client [None:namemyWj;middlenameyd]",
+    "time" : {
+      "start" : 1603459553258,
+      "stop" : 1603459566544,
+      "duration" : 13286
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "bbe7abd9d5b691c7",
+    "name" : "test_add_client[None:nameQaY;middlenameQy]",
+    "title" : "Test add client [None:nameQaY;middlenameQy]",
+    "time" : {
+      "start" : 1603459566545,
+      "stop" : 1603459579821,
+      "duration" : 13276
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "773d53a46706f862",
+    "name" : "test_add_client[None:nameYWZL;middlenameCURHxd]",
+    "title" : "Test add client [None:nameYWZL;middlenameCURHxd]",
+    "time" : {
+      "start" : 1603459579822,
+      "stop" : 1603459593241,
+      "duration" : 13419
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "add742056be6a28f",
+    "name" : "test_add_client[None:nameiY;middlenamebCkz]",
+    "title" : "Test add client [None:nameiY;middlenamebCkz]",
+    "time" : {
+      "start" : 1603459593251,
+      "stop" : 1603459606690,
+      "duration" : 13439
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "c1fb3bdd2bc6f30b",
+    "name" : "test_group_list",
+    "title" : "Test group list",
+    "time" : {
+      "start" : 1603459621649,
+      "stop" : 1603459633997,
+      "duration" : 12348
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "7f52d2b6e080f6c2",
+    "name" : "test_delete_first_client",
+    "title" : "Test delete first client",
+    "time" : {
+      "start" : 1603459633997,
+      "stop" : 1603459636584,
+      "duration" : 2587
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  } ]
+}

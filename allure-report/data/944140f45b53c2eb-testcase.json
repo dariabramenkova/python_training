@@ -1,0 +1,146 @@
+{
+  "uid" : "944140f45b53c2eb",
+  "name" : "test_add_client_in_group",
+  "title" : "Test add client in group",
+  "time" : {
+    "start" : 1603458984566,
+    "stop" : 1603458987307,
+    "duration" : 2741
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 6
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "1956604e4e90ef62",
+    "name" : "test.test_client_in_group",
+    "title" : "Test client in group"
+  },
+  "steps" : [ {
+    "name" : "Given a group list and a client list",
+    "title" : "Given a group list and a client list",
+    "time" : {
+      "start" : 1603458984639,
+      "stop" : 1603458984650,
+      "duration" : 11
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Choice a group from list",
+    "title" : "Choice a group from list",
+    "time" : {
+      "start" : 1603458984650,
+      "stop" : 1603458984650,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "If do not find group,add him",
+    "title" : "If do not find group,add him",
+    "time" : {
+      "start" : 1603458984650,
+      "stop" : 1603458984656,
+      "duration" : 6
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "If do not find client,add him",
+    "title" : "If do not find client,add him",
+    "time" : {
+      "start" : 1603458984656,
+      "stop" : 1603458984660,
+      "duration" : 4
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "If do not find client not in group,add him",
+    "title" : "If do not find client not in group,add him",
+    "time" : {
+      "start" : 1603458984660,
+      "stop" : 1603458984675,
+      "duration" : 15
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Add client to group",
+    "title" : "Add client to group",
+    "time" : {
+      "start" : 1603458984675,
+      "stop" : 1603458987306,
+      "duration" : 2631
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "a400c87f-acd4-491a-9bcc-e740ba3cf733-attachment.txt",
+    "type" : "text/plain",
+    "size" : 1096,
+    "uid" : "dd95dcf33fd688b8"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test.test_client_in_group"
+  }, {
+    "name" : "host",
+    "value" : "REZERV-17652"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "9964-MainThread"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}

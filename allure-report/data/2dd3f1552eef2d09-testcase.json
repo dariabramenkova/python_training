@@ -1,0 +1,125 @@
+{
+  "uid" : "2dd3f1552eef2d09",
+  "name" : "test_edit_first_client",
+  "title" : "Test edit first client",
+  "time" : {
+    "start" : 1603459638585,
+    "stop" : 1603459646587,
+    "duration" : 8002
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 5
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "99e14a45677f1c6c",
+    "name" : "test.test_edit_first_client",
+    "title" : "Test edit first client"
+  },
+  "steps" : [ {
+    "name" : "Given a client list",
+    "title" : "Given a client list",
+    "time" : {
+      "start" : 1603459638669,
+      "stop" : 1603459638678,
+      "duration" : 9
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Choice a client from list",
+    "title" : "Choice a client from list",
+    "time" : {
+      "start" : 1603459638678,
+      "stop" : 1603459638678,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Edit a client from list",
+    "title" : "Edit a client from list",
+    "time" : {
+      "start" : 1603459638678,
+      "stop" : 1603459644003,
+      "duration" : 5325
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "If do not find client,add him",
+    "title" : "If do not find client,add him",
+    "time" : {
+      "start" : 1603459644003,
+      "stop" : 1603459646573,
+      "duration" : 2570
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new group list is equal to the old list with the adden group",
+    "title" : "Then the new group list is equal to the old list with the adden group",
+    "time" : {
+      "start" : 1603459646573,
+      "stop" : 1603459646587,
+      "duration" : 14
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "REZERV-17652"
+  }, {
+    "name" : "suite-name",
+    "value" : "test.test_edit_first_client"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "thread",
+    "value" : "15668-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}

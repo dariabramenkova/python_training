@@ -1,0 +1,95 @@
+{
+  "uid" : "6790886ef42344a8",
+  "name" : "test_add_client[None:nameQaY;middlenameQy]",
+  "title" : "Test add client [None:nameQaY;middlenameQy]",
+  "time" : {
+    "start" : 1603458936732,
+    "stop" : 1603458950002,
+    "duration" : 13270
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 3
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "f614ad2cbf67b04c",
+    "name" : "test.test_add_client",
+    "title" : "Test add client"
+  },
+  "steps" : [ {
+    "name" : "Given a client list",
+    "title" : "Given a client list",
+    "time" : {
+      "start" : 1603458936818,
+      "stop" : 1603458936822,
+      "duration" : 4
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When I add a client None:nameQaY;middlenameQy to the list",
+    "title" : "When I add a client None:nameQaY;middlenameQy to the list",
+    "time" : {
+      "start" : 1603458936822,
+      "stop" : 1603458949977,
+      "duration" : 13155
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new client list is equal to the old list with the adden client",
+    "title" : "Then the new client list is equal to the old list with the adden client",
+    "time" : {
+      "start" : 1603458949977,
+      "stop" : 1603458950001,
+      "duration" : 24
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "REZERV-17652"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "suite-name",
+    "value" : "test.test_add_client"
+  }, {
+    "name" : "thread",
+    "value" : "9964-MainThread"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}

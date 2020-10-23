@@ -1,0 +1,50 @@
+{
+  "uid" : "84b0798c6bd43adc",
+  "name" : "test_phones_on_home_page",
+  "title" : "Test phones on home page",
+  "time" : {
+    "start" : 1603459016328,
+    "stop" : 1603459022033,
+    "duration" : 5705
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "bc47d6fb4071ac5e",
+    "name" : "test.test_phones",
+    "title" : "Test phones"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "REZERV-17652"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "9964-MainThread"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "suite-name",
+    "value" : "test.test_phones"
+  } ],
+  "parameters" : [ ]
+}

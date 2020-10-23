@@ -1,0 +1,102 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1603459614924" stop="1603459621646">
+  <name>test.test_client_in_group</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1603459614924" status="passed" stop="1603459617700">
+      <name>test_add_client_in_group</name>
+      <attachments>
+        <attachment source="2252b779-f42d-4241-9b5f-4ffd05e42eb3-attachment.txt" title="Captured stdout call" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="15668-MainThread"/>
+        <label name="host" value="REZERV-17652"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1603459615020" status="passed" stop="1603459615029">
+          <name>Given a group list and a client list</name>
+          <title>Given a group list and a client list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459615029" status="passed" stop="1603459615029">
+          <name>Choice a group from list</name>
+          <title>Choice a group from list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459615029" status="passed" stop="1603459615032">
+          <name>If do not find group,add him</name>
+          <title>If do not find group,add him</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459615032" status="passed" stop="1603459615035">
+          <name>If do not find client,add him</name>
+          <title>If do not find client,add him</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459615035" status="passed" stop="1603459615049">
+          <name>If do not find client not in group,add him</name>
+          <title>If do not find client not in group,add him</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459615049" status="passed" stop="1603459617699">
+          <name>Add client to group</name>
+          <title>Add client to group</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1603459617703" status="passed" stop="1603459621646">
+      <name>test_del_client_from_group</name>
+      <attachments>
+        <attachment source="96931b6b-6158-4b99-9eca-246a730df369-attachment.txt" title="Captured stdout call" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="15668-MainThread"/>
+        <label name="host" value="REZERV-17652"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1603459618904" status="passed" stop="1603459618907">
+          <name>If do not find group,add him</name>
+          <title>If do not find group,add him</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459618907" status="passed" stop="1603459618911">
+          <name>If do not find client,add him</name>
+          <title>If do not find client,add him</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459618911" status="passed" stop="1603459618914">
+          <name>Given a group list and a client list</name>
+          <title>Given a group list and a client list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459618914" status="passed" stop="1603459618919">
+          <name>Choice a group from list</name>
+          <title>Choice a group from list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459618919" status="passed" stop="1603459621645">
+          <name>Del client from group</name>
+          <title>Del client from group</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

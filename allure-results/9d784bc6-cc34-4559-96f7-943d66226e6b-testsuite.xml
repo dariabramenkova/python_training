@@ -1,0 +1,49 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1603459646588" stop="1603459649024">
+  <name>test.test_edit_group</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1603459646588" status="passed" stop="1603459649024">
+      <name>test_edit_name_group</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="15668-MainThread"/>
+        <label name="host" value="REZERV-17652"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1603459647733" status="passed" stop="1603459648015">
+          <name>If do not find group,add him</name>
+          <title>If do not find group,add him</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459648015" status="passed" stop="1603459648018">
+          <name>Given a group list</name>
+          <title>Given a group list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459648018" status="passed" stop="1603459648018">
+          <name>Choice a group from list</name>
+          <title>Choice a group from list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459648018" status="passed" stop="1603459648999">
+          <name>Edit a group from list</name>
+          <title>Edit a group from list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1603459648999" status="passed" stop="1603459649023">
+          <name>Then the new group list is equal to the old list with the adden group</name>
+          <title>Then the new group list is equal to the old list with the adden group</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
