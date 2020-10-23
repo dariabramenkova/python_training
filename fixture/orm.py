@@ -2,7 +2,6 @@ from pony.orm import *
 from datetime import datetime
 from model.group import Group
 from model.client import Client
-from pymysql.converters import decoders
 
 class ORMFixture:
     db=Database()
